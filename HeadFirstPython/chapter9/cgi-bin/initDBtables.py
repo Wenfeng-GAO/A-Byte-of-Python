@@ -10,7 +10,7 @@ def getAthletesObj(file_list):
     for each_file in file_list:
         try:
             with open(each_file) as ath_file:
-                data = ath_file.readline().strip().split(",", 1)
+                data = ath_file.readline().strip().split(",")
                 athlete = athletelist.AthleteList(data.pop(0), data.pop(0), data)
                 result.append(athlete)
         except IOError as err:
