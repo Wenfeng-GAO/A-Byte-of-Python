@@ -32,8 +32,8 @@ def get_athlete_from_id(athlete_id):
     data = [row[0] for row in results.fetchall()]
 
     # Put all data in a dictionary
-    response = {    "Name": name,
-                    "DOB":  dob,
+    response = {    "name": name,
+                    "dob":  dob,
                     "data": data,
                     "top3": data[0:3]}
     connection.close()
