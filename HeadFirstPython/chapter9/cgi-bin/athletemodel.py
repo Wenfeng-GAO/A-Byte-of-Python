@@ -21,6 +21,7 @@ def get_namesID_from_store():
 
 def get_athlete_from_id(athlete_id):
     connection = sqlite3.connect(db_name)
+    connection.text_factory = str
     cursor = connection.cursor()
 
     # Get name and dob
