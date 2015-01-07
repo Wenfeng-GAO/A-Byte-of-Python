@@ -18,5 +18,5 @@ print yate.header("Athlete:" + athlete['name'] + ", DOB:" + athlete['dob'] + "."
 print yate.para("The top times for " + athlete['name'] + " are:")
 print yate.u_list(athlete['top3'])
 print yate.para("The entire set of timing data is: " + str([float(item) for item in athlete['data']]) + " (duplicates removed).")
-print yate.do_form("add_time.py", ['add_time'], "post", "Add a new time");
+print yate.do_form("add_timing_data.py", [athlete_id], "post", "Add a new time");
 print yate.include_footer({"Home":"../index.html", "Select another athlete":"generate_list.py"})
