@@ -1,6 +1,10 @@
 #! usr/bin/env python
 import webapp2
 
-print('Content-type: text/html\n\n')
-print 'Hello from Head First Python on GAE!'
+class myHandler(webapp2.RequestHandler):
+    def get(self):
+        self.response.write("Hello, world!")
 
+application = webapp2.WSGIApplication([
+    ('/.*', myHandler),
+], debug=True)
