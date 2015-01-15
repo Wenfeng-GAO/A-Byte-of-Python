@@ -22,7 +22,6 @@ class SightingInputPage(webapp2.RequestHandler):
         html = html + template.render('templates/footer.html', {'links': ''})
         self.response.write(html)
 
-"""
     def post(self):
         new_sighting = hfwwgDB.Sighting()
         new_sighting.name = self.request.get('name')
@@ -40,11 +39,9 @@ class SightingInputPage(webapp2.RequestHandler):
 
         html = template.render('templates/header.html', {'title': 'Thank you!'})
         html = html + "<p>Thank you for providing your sighting data.</p>"
-        html = html + template.render('templates/footer.html',
-                                      {'links': 'Enter <a href="/">another sighting</a>.'})
+        html = html + template.render('templates/footer.html',  {'links': 'another sighting'})
         self.response.out.write(html)
 
-"""
 application = webapp2.WSGIApplication([
     ('/.*', SightingInputPage),
 ], debug=True)
